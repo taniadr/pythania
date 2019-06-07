@@ -6,5 +6,13 @@ from app import app
 @app.route('/')         
 @app.route('/index')
 def index():
-    return "Hello, World!"
-
+    user = {'username' : 'Mary'}
+    return '''
+<html>
+    <head>
+        <title>Pythania Microblog</title>
+    </head>
+    <body>
+        <h1>Hey you, ''' + user['username'] + '''!</h1>
+    </body>
+</html>'''
